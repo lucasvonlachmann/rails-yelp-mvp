@@ -1,6 +1,9 @@
-<h1>Restaurants</h1>
-<ul>
-  <% @restaurants.each do |restaurant| %>
-    <li><%= restaurant.name %></li>
-  <% end %>
-</ul>
+<div class="text-center">
+  <h1>Restaurants</h1>
+  <br>
+  <ul class="list-unstyled">
+    <% @restaurants.each do |restaurant| %>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <% end %>
+  </ul>
+</div>
